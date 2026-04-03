@@ -1,76 +1,174 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Лабораторная работа CSS 3.1</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-</head>
-<body>        
+.left-block{
+    float: left;
+    display: block;
+    width: 150px;
+    height: 600px;
+    word-wrap: break-word;
+    box-shadow: 3px 3px 3px black;
+    font-size: 17px;
+    margin-right: 15px;
+    background: linear-gradient(to right, #dbdbdb, #afd8f4);
+}
+.right-block{
+    float: right;
+    display: block;
+    width: 150px;
+    height: 525px;
+    word-wrap: break-word;
+    box-shadow: 3px 3px 3px black;
+    font-size: 17px;
+    margin-left: 10px;
+    background: linear-gradient(to right, #dbdbdb, #afd8f4);
+}
+.center-block{
+    display: block;
+    background: linear-gradient(to bottom, #dbdbdb, #afd8f4);
+    width: calc(100% - 330px);
+    box-shadow: 3px 3px 3px black;
+    padding: 15px;
+    overflow: hidden;
+    font-size: 17px;
+    min-height: 400px;
 
-    <header class="header1">
-        <h1><i>instructional design</i></h1>
-    </header>
+}
+.news{
+    display: block;
+    border-radius: 15px 15px;
+    background-color: #85c8f3;
+    text-align: center;
+    width: 112px;
+    height: 20px;
+    margin: 5px auto;
+}
+.news-text{
+    display: block;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 7px 7px;
+    background-color: #afd8f4;
+    height: 550px;
+    width: 125px;
+    float: right;
+    margin: 20px 10px 5px 5px;
+    overflow: hidden;
+}
+.contacts{
+    display: block;
+    border-radius: 15px 15px;
+    background-color: #85c8f3;
+    text-align: center;
+    width: 90px;
+    height: 20px;
+    margin: 5px auto;
+}
+.contacts-text{
+    display: block;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 7px 7px;
+    background-color: #afd8f4;
+    height: 150px;
+    width: 125px;
+    float: right;
+    margin: 20px 10px 5px 5px;
+    overflow: hidden;
+}
+.services{
+    display: block;
+    border-radius: 15px 15px;
+    background-color: #85c8f3;
+    text-align: center;
+    width: 112px;
+    height: 20px;
+    margin: 5px auto;
+}
+.services-text{
+    display: block;
+    box-shadow: 3px 3px 3px black;
+    border-radius: 7px 7px;
+    background-color: #afd8f4;
+    height: 300px;
+    width: 125px;
+    float: right;
+    margin: 20px 10px 5px 5px;
+    overflow: hidden;
+}
+#img {
+    width: 230px;
+    height: 230px;
+    display: block;
+    float: left;
+    background-color: white;
+    border-radius: 30px 30px;
+}
 
-    <div class="header2">
-        <div class="block">ГЛАВНАЯ</div>
-        <div class="block">ОТДЕЛЫ ПРОДАЖ</div>
-        <div class="block">ПОСТАВЩИКИ</div>
-        <div class="block">КОНТАКТЫ</div>
-        <div class="block">О НАС</div>
-    </div>
+.info {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; 
+    margin: 5px;
+}
 
-    <div class="main-container">
+.info::before {
+    content: "Telegram";
+    position: absolute;
+    width: 100%;
+    height: 20%; 
+    bottom: -100%; 
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.8);
+    color: black;
+    text-align: center;
+    transition: bottom 0.3s;
+    z-index: 10;
+    border-radius: 0 0 30px 30px;
+}
 
-        <div class="left-block">
-            <div class="news-text">
-                <div class="news"><b>Новости</b></div>
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. 
-                Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
-                В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
-                Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
-                Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, 
-                программы электронной вёрстки типа Aldus PageMaker, 
-                в шаблонах которых используется Lorem Ipsum.
-            </div>
-        </div>
+.info:hover::before {
+    bottom: 0;
+}
+.header1{
+    display: block;
+    background: linear-gradient(to right, #dbdbdb, #afd8f4);
+    width: 100%;
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+    height: 50px;
+    margin: 15px 0 15px 0;
+    font-size: large;
+    word-wrap: break-word;
+}
+.header2{
+    display: block;
+    background: linear-gradient(to bottom, #dbdbdb, #afd8f4);
+    width: 100%;
+    height: 45px;
+    box-shadow: 0px 3px gray;
+}
+.block {
+    display: block;
+    float: left;
+    width: 170px;
+    height: 45px;
+    height: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    box-shadow: 2px 0px black;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
 
-        <div class="right-block">
-            <div class="contacts-text">
-                <div class="contacts"><b>Контакты</b></div>
-                <b>Адрес:</b> г.Москва, улица Академика Королёва 12<br>
-                <b>Телефон:</b> 8-999-999-99-99
-            </div>
-            <div class="services-text">
-                <div class="services"><b>Услуги</b></div>
-                · Разработка дизайна <br>
-                · Разработка web-приложений <br>
-                · Разработка web-сервисов <br>
-            </div>
-        </div>
-
-        <div class="center-block">
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-             <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-            <div class="info">
-                <img id="img" src="img/1.png" alt="aaaa">
-            </div>
-        </div>
-    </div>
-
-</body>
-</html>
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.main-container {
+    width: 100%;
+    overflow: hidden;
+}
