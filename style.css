@@ -114,12 +114,12 @@
     height: 20%;
     background-color: grey;
     text-align: center;
-    transition: bottom .3s;
 }
 
 .info:hover::before {
     bottom: 0;
     opacity: 0.7;
+    transition: bottom .3s;
 }
 .header1{
     display: block;
